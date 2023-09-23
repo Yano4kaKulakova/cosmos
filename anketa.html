@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html land="ru">
+<title>Анкета обратной связи</title>
+
+<style type="text/css"> 
+    h1 {
+        padding-top: 120px;
+        padding-left: 40px;
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 14px;
+        color:black;
+    }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+     <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">  
+  <title>cosmos</title>
+</head>
+
+<body>
+<header class="header">
+     <div class="container">
+         <div class="header__inner">
+         <a class="header__logo" href="index.php"><img src="assets/images/logo.jpg" ></a>
+             <info class="info"><a>Смоленск, Октябрьской Революции, 9к4<br/>+7 (952) 531-96-56<br/></a></info>
+             <nav class="nav">    
+             <a class="nav__link" href="index.php">ГЛАВНАЯ</a>
+             <a class="nav__link" href="login.php">ЛИЧНЫЙ КАБИНЕТ</a>
+             <a class="nav__link" href="index.php#stock">АКЦИИ</a> 
+             <a class="nav__link" href="index.php#contacts">КОНТАКТЫ</a> 
+             </nav>
+         </div>
+     </div>
+     </header>
+    
+<form name="gost" method="post" action="anketa.php" enctype="multipart/form-data" align="left"><h1> 
+    <div class= vopr_8> <p class=form_vopr_t> ДЛЯ УЧАСТИЯ В АКЦИИ ВВЕДИТЕ ВАШ НОМЕР ТЕЛЕФОНА </p></div>
+    <div class= otv_8><input name="phone" size=40 value10="<?php echo $_POST['phone']; ?>" required placeholder="Номер телефона"></div> 
+    
+    <div class= vopr_1><p class=form_vopr_t>1. ВАШ ПОЛ? </p></div>
+    <div class= otv_11><input type="radio" name="sex" value=male> мужской </div>
+    <div class= otv_12><input type="radio" name="sex" value=female> женский </div>
+
+    <div class= vopr_2><p class=form_vopr_t>2. ВАШ ВОЗРАСТ? </p></div>
+    <div class= otv_21><input type="radio" name="age" value=under18> младше 18 </div>
+    <div class= otv_22><input type="radio" name="age" value=18-24> от 18 до 24 </div>
+    <div class= otv_23><input type="radio" name="age" value=25-34> от 25 до 34 </div>
+    <div class= otv_24><input type="radio" name="age" value=35-44> от 35 до 44 </div>
+    <div class= otv_25><input type="radio" name="age" value=over45> старше 45 </div>
+
+    <div class= vopr_3><p class=form_vopr_t>3. КАК ЧАСТО ВЫ ПОЛЬЗУЕТЕСЬ УСЛУГАМИ БАТУТНЫХ ЦЕНТРОВ? </p></div>
+    <div class= otv_31><input type="radio" name="freq" value=5> ежедневно </div>
+    <div class= otv_32><input type="radio" name="freq" value=4> несколько раз в неделю </div>
+    <div class= otv_33><input type="radio" name="freq" value=3> один раз в неделю </div>
+    <div class= otv_34><input type="radio" name="freq" value=2> несколько раз в месяц </div>
+    <div class= otv_35><input type="radio" name="freq" value=1> очень редко </div>
+    
+    <div class= vopr_4><p class=form_vopr_t>4. ВЫ УЖЕ УСПЕЛИ ПОСЕТИТЬ БАТУТНЫЙ ЦЕНТР «КОСМОС»?</p></div>
+    <div class= otv_41><input type="radio" name="visit" value=yes> да </div>
+    <div class= otv_42><input type="radio" name="visit" value=no> нет, но очень хочу </div>
+
+    <div class= vopr_5><p class=form_vopr_t>5. ПО ВАШЕМУ МНЕНИЮ КАКИЕ КРИТЕРИИ ЯВЛЯЮТСЯ НАИБОЛЕЕ ВАЖНЫМИ ПРИ ВЫБОРЕ БАТУТНОГО ЦЕНТРА?</p> </div>
+    <div class= otv_51><input type="radio" name="crit" value=safety> неценовые факторы </div>
+    <div class= otv_53><input type="radio" name="crit" value=price> ценовые факторы </div>
+     
+    <div class= vopr_6><p class=form_vopr_t>6. КАК БЫ ВЫ ОЦЕНИЛИ УДОБСТВО САЙТА? </p></div>
+    <div class= otv_61><input type="radio" name="rate" value=5> отлично </div>
+    <div class= otv_62><input type="radio" name="rate" value=4> хорошо </div>
+    <div class= otv_63><input type="radio" name="rate" value=3> удовлетворительно </div>
+    <div class= otv_64><input type="radio" name="rate" value=2> неудовлетворительно </div>
+
+    <div class= vopr_7> <p class=form_vopr_t>7. ЧТО БЫ ВЫ ПОСОВЕТОВАЛИ ИЗМЕНИТЬ В РАБОТЕ САЙТА?</p></div>
+    <div class= otv_7><input name="improve" size=100 value9="<?php echo $_POST['improve']; ?>" placeholder="Ваши предложения"></div>
+
+    <p><input type="submit" value="ОТПРАВИТЬ">
+    <input type="reset" value="ОЧИСТИТЬ"></p></h1>
+</form>
+</body>
+</html>
